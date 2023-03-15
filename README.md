@@ -42,6 +42,8 @@ From there, make your get/post/put/delete requests in Insomnia.
 
 ## Assets
 
+Link to video tutorial - https://drive.google.com/file/d/1l-O7nqygYNnSr2dbm0NVLqzu2PwjuHgP/view
+
 ## License
 
 MIT License https://opensource.org/license/mit-0/
