@@ -15,17 +15,14 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const productData = await Product.findByPk(req.params.id, {
-      // Include these connected models in the json response
       include: [{ model: Category }, { model: Tag }],
     });
 
-    // If id is incorrect, give the 404 error status, plus the message
     if (!productData) {
       res.status(404).json({ message: "There are no products with that ID!" });
       return;
     }
 
-    // If there is a valid id, give the 200 status, and the data in json form
     res.status(200).json(productData);
   } catch (err) {
     res.status(500).json(err);
